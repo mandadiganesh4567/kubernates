@@ -27,10 +27,10 @@ spec:
         resources:
           requests:
             cpu: "100m"
-            memory: 256mi
+            memory: 256Mi
           limits:
             cpu: "110m"
-            memory: 257mi
+            memory: 257Mi
   volumeClaimTemplates:
   - metadata:
       name: mysql
