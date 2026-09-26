@@ -26,11 +26,11 @@ spec:
           mountPath: /data
         resources:
           requests:
-            cpu: "100m"
-            memory: 256Mi
+            cpu: "200m"
+            memory: 756Mi
           limits:
-            cpu: "110m"
-            memory: 257Mi
+            cpu: "210m"
+            memory: 757Mi
   volumeClaimTemplates:
   - metadata:
       name: mysql
