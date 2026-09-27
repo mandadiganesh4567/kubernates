@@ -1,0 +1,5 @@
+deployment:
+  imageVersion : nginx:1.14.2
+  replicas: 1
+service:
+  portNumber: 80
