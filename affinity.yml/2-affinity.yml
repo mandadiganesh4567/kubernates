@@ -12,7 +12,7 @@ spec:
             operator: In
             values:
             - podaffinity
-        topologyKey: topology.kubernetes.io/zone
+        topologyKey: kubernetes.io/hostname
   containers:
   - name: nginx
     image: nginx:1.23.3-alpine
