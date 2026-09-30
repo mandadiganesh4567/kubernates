@@ -14,7 +14,7 @@ spec:
     #         - podaffinity
     #     topologyKey: kubernetes.io/hostname
     podAntiAffinity:
-      preferredDuringSchedulingIgnoredDuringExecution:
+      requiredDuringSchedulingIgnoredDuringExecution:
       - weight: 100
         podAffinityTerm:
           labelSelector:
