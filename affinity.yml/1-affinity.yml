@@ -44,3 +44,28 @@ spec:
     operator: "Equal"
     value: "you"
     effect: "NoSchedule"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+spec:
+  affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+              - key: purpose
+                operator: In
+                values:
+                - podaffinity
+            topologyKey: kubernetes.io/hostname
+  containers:
+  - name: nginx
+    image: nginx:1.23.3-alpine
+  tolerations:
+  - key: "fuck"
+    operator: "Equal"
+    value: "you"
+    effect: "NoSchedule" 
