@@ -17,4 +17,4 @@ spec:
         topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
-    image: inginx:1.23.3-alpine
+    image: nginx:1.23.3-alpine
