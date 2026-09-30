@@ -5,7 +5,7 @@ metadata:
 spec:
   affinity:
     podAntiAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
+      preferredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
           - key: purpose
@@ -16,3 +16,4 @@ spec:
   containers:
   - name: nginx
     image: nginx:1.23.3-alpine
+    
