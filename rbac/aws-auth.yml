@@ -6,7 +6,9 @@ data:
       - system:bootstrappers
       - system:nodes
       username: system:node:{{EC2PrivateDNSName}}
-  mapUsers:
+  mapUsers: |
+    - groups:
+    - system:masters
     - userarn: arn:aws:iam::816600798829:user/devuser
       username: devUser
 kind: ConfigMap
