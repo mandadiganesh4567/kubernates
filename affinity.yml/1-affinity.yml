@@ -6,14 +6,15 @@ metadata:
     purpose: podaffinity
 spec:
   affinity:
-    nodeAffinity:
+    podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
+      - labelSelector:
+          matchExpressions:
           - key: purpose
             operator: In
             values:
             - podaffinity
+        topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
-    image: ngin-alpine:1.23.3
+    image: inginx:1.23.3-alpine
