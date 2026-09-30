@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: devuserPodRead
+rules:
+- apiGroups: [""]           # core API group
+  resources: ["pods", "pods/log"]
+  verbs: ["get", "list", "watch"]
+---
+# Bind to a user
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: read-pods
+subjects:
+- kind: User
+  name: devUser
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: devuserPodRead
+  apiGroup: rbac.authorization.k8s.io
