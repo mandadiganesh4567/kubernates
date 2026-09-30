@@ -6,6 +6,9 @@ data:
       - system:bootstrappers
       - system:nodes
       username: system:node:{{EC2PrivateDNSName}}
+  mapUsers:
+    - userarn: arn:aws:iam::816600798829:user/devuser
+      username: devUser
 kind: ConfigMap
 metadata:
   creationTimestamp: "2026-09-30T16:52:54Z"
@@ -13,6 +16,3 @@ metadata:
   namespace: kube-system
   resourceVersion: "1288"
   uid: d882b488-68b5-454c-83a6-23025e51a502
-mapUsers: |
-    - userarn: arn:aws:iam::816600798829:user/devuser
-      username: devUser
