@@ -2,9 +2,10 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
+  metadata:
   name: ganesh-eks
   region: us-east-1
-
+  version: "1.36"
 managedNodeGroups:
   - name: worker-nodes
     instanceType: t3.small
