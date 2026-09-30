@@ -9,8 +9,6 @@ data:
   mapUsers: |
     - userarn: arn:aws:iam::816600798829:user/devuser
       username: devUser
-      groups:
-      - system:masters
 kind: ConfigMap
 metadata:
   creationTimestamp: "2026-09-30T16:52:54Z"
