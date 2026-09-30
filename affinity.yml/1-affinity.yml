@@ -52,15 +52,14 @@ metadata:
 spec:
   affinity:
       podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          podAffinityTerm:
-            labelSelector:
-              matchExpressions:
-              - key: purpose
-                operator: In
-                values:
-                - podaffinity
-            topologyKey: kubernetes.io/hostname
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: purpose
+                    operator: In
+                    values:
+                    - podaffinity
+              topologyKey: kubernetes.io/hostname
   containers:
   - name: nginx
     image: nginx:1.23.3-alpine
