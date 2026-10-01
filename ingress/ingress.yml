@@ -11,7 +11,7 @@ spec:
     - host: app1
       http:
         paths:
-          - path: /app1
+          - path: "/app1"
             pathType: Prefix
             backend:
               service:
@@ -21,7 +21,7 @@ spec:
     - host: app2
       http:
         paths:
-          - path: /app2
+          - path: "/app2"
             pathType: Prefix
             backend:
               service:
