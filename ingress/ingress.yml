@@ -16,7 +16,8 @@ spec:
             backend:
               service:
                 name: app1
-                port: 80
+                port:
+                  number : 80
     - host: app2
       http:
         paths:
@@ -25,4 +26,5 @@ spec:
             backend:
               service:
                 name: app2
-                port: 80
+                port:
+                  number : 80
