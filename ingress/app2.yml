@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app2
   labels:
-    app: nginxapp1
+    app: nginxapp2
 spec:
   replicas: 3
   selector:
@@ -24,7 +24,7 @@ metadata:
   name: app2
 spec:
   selector:
-    app: nginxapp1
+    app: nginxapp2
   ports:
   - name: app2
     protocol: TCP
