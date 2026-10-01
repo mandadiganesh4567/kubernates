@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host:
+    - host: app1
       http:
         paths:
           - path: /app1
@@ -17,7 +17,7 @@ spec:
               service:
                 name: app1
                 port: 80
-    - host:
+    - host: app2
       http:
         paths:
           - path: /app2
